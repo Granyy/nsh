@@ -38,8 +38,9 @@
 #define __MAIN_H
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f4xx_hal.h"
-#include "stm32f4xx_nucleo.h"
+#include "stm32l4xx.h"
+#include "stm32l4xx_hal.h"
+#include "stm32l4xx_nucleo_32.h"
 #include "stdio.h"
 
 /* Exported types ------------------------------------------------------------*/
@@ -56,10 +57,10 @@
 #define USARTx_RELEASE_RESET()           __HAL_RCC_USART2_RELEASE_RESET()
 
 /* Definition for USARTx Pins */
-#define USARTx_TX_PIN                    GPIO_PIN_2
+#define USARTx_TX_PIN                    GPIO_PIN_15
 #define USARTx_TX_GPIO_PORT              GPIOA  
-#define USARTx_TX_AF                     GPIO_AF7_USART2
-#define USARTx_RX_PIN                    GPIO_PIN_3
+#define USARTx_TX_AF                     GPIO_AF3_USART2
+#define USARTx_RX_PIN                    GPIO_PIN_2
 #define USARTx_RX_GPIO_PORT              GPIOA 
 #define USARTx_RX_AF                     GPIO_AF7_USART2
   

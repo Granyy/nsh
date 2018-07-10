@@ -17,6 +17,15 @@ UART_HandleTypeDef UartHandle;
 static void SystemClock_Config(void);
 static void Error_Handler(void);
 
+int cmd_test(int argc, char **argv)
+{
+    SHELL_UNUSED(argc);
+    SHELL_UNUSED(argv);
+    puts("This is not an helpful help message !");
+    return SHELL_STATUS_FAILURE;
+}
+
+
 int main(void)
 {
 	HAL_Init();
@@ -42,6 +51,9 @@ int main(void)
 	setvbuf(stdin,NULL,_IONBF,0);
 	setvbuf(stdout,NULL,_IONBF,0);
 
+
+	shell_init();
+	shell_register_command("test", cmd_test);
 	run_shell();
 
 	while (1)

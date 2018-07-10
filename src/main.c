@@ -39,8 +39,6 @@ int main(void)
 	if(HAL_UART_Init(&UartHandle) != HAL_OK)
 		Error_Handler();
 
-	printf("YOOO\r\n");
-
 	setvbuf(stdin,NULL,_IONBF,0);
 	setvbuf(stdout,NULL,_IONBF,0);
 
